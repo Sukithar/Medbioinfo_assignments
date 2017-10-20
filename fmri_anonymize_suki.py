@@ -48,7 +48,7 @@ print('Copying DICOM files to destination dir')
 
 for dirName, subdirList, fileList in os.walk((PathDicom), topdown=False):
     for files in fileList:
-        if "EEFFFDEC_" in files:
+        if "EE" in files:
             if files not in listFilesDCM:
                 listFilesDCM.append(os.path.join(dirName, files)) # adds files from different directories
 #                print(files)
